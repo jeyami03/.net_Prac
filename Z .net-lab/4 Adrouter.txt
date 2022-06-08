@@ -1,0 +1,72 @@
+ads.xml
+<Advertisements>
+	<Ad>
+		<ImageUrl>../0.jpeg</ImageUrl>
+		<NavigateUrl>http://www.1800flowers.com</NavigateUrl>
+		<AlternateText>
+			Order flowers, roses, gifts and more
+		</AlternateText>
+		<Impressions>20</Impressions>
+		<Keyword>flowers</Keyword>
+	</Ad>
+
+	<Ad>
+		<ImageUrl>../0.jpeg</ImageUrl>
+		<NavigateUrl>http://www.babybouquets.com.au</NavigateUrl>
+		<AlternateText>Order roses and flowers</AlternateText>
+		<Impressions>20</Impressions>
+		<Keyword>gifts</Keyword>
+	</Ad>
+
+	<Ad>
+		<ImageUrl>../0.jpeg</ImageUrl>
+		<NavigateUrl>http://www.flowers2moscow.com</NavigateUrl>
+		<AlternateText>Send flowers to Russia</AlternateText>
+		<Impressions>20</Impressions>
+		<Keyword>russia</Keyword>
+	</Ad>
+
+	<Ad>
+		<ImageUrl>../0.jpeg</ImageUrl>
+		<NavigateUrl>http://www.edibleblooms.com</NavigateUrl>
+		<AlternateText>Edible Blooms</AlternateText>
+		<Impressions>20</Impressions>
+		<Keyword>gifts</Keyword>
+	</Ad>
+</Advertisements>
+
+
+
+---------------------------
+
+adRouter.aspx
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="adRouter.aspx.vb" Inherits="currencyVB.adRouter" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        #Form1 {
+            height: 347px;
+            width: 462px;
+        }
+    </style>
+</head>
+<body>  
+    <form id="Form1" runat="server">
+        <asp:adrotator id="ad1" advertisementfile="ads.xml" target="_blank" bordercolor="blue" borderwidth=3 runat="server" />
+          <br><br>
+        <asp:Label id="lblMessage" runat="server"/>
+
+        <%--<asp:adrotator id="Adrotator1" advertisementfile="ads.xml" target="_blank" bordercolor="blue" borderwidth=3 runat="server" />--%>
+        <%--<asp:adrotator id="Adrotator2" advertisementfile="ads.xml" target="_blank" bordercolor="blue" borderwidth=3 runat="server" />
+        <asp:adrotator id="Adrotator3" advertisementfile="ads.xml" target="_blank" bordercolor="blue" borderwidth=3 runat="server" />--%>
+
+        <%--<asp:AdRotator ID="adRouter" runat="server" AdvertisementFile="~/jeyami/ads.xml" />--%>
+
+</form>
+</body>
+</html>
